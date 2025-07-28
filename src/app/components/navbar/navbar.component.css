@@ -1,0 +1,22 @@
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+.custom-navbar {
+    background-color: #F7F7F6;
+  }
+  .nav-link {
+    color: #1F2937; /* Charcoal Gray */
+  }
+  .nav-link:hover {
+    color: #6366F1; /* Electric Indigo */
+  }
+  .navbar-brand {
+    color:var( --color-accent-orange); /* Tangerine */
+    font-weight: 600;
+  }
+  .navbar-toggler {
+    border-color: #ddd;
+  }

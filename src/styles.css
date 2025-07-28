@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    /* Base Colors */
+    --color-bg: #121212;
+    --color-surface: #1E1E1E;
+    --color-border: #2C2C2C;
+  
+    /* Text Colors */
+    --color-text-primary: #E5E5E5;
+    --color-text-secondary: #9CA3AF;
+  
+    /* Accent Colors */
+    --color-accent-indigo: #6366F1;
+    --color-accent-teal: #5EEAD4;
+    --color-accent-orange: #FF6B35;
+  
+    /* Optional Muted Shades */
+    --color-muted-purple: #5A5560;
+    --color-muted-slate: #3F3D56;
+    --color-muted-gray: #B0BEC5;
+  
+    /* States */
+    --color-hover: #1A1A1A;
+    --color-active: #2A2A2A;
+  }
+  
+body{
+    background-color:var(--color-bg) ;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
