@@ -16,9 +16,7 @@
             "outputPath": "dist/job-searching",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -28,12 +26,9 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"          ],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -76,7 +71,6 @@
           "options": {
             "buildTarget": "job-searching:build",
             "baseHref": "/job-finder/"
-
           }
         },
         "test": {
