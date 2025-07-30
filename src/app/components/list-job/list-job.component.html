@@ -1,1 +1,53 @@
-<p>list-job works!</p>
+<section>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <form class="job-post-form p-4 rounded shadow-sm">
+          <h4 class="mb-4 text-center" style="color: var(--color-text-primary);">Post a New Job</h4>
+  
+          <!-- Job Title -->
+          <div class="mb-3">
+            <label class="form-label text-light">Job Title</label>
+            <input type="text" class="form-control custom-input" placeholder="e.g. Frontend Developer">
+          </div>
+  
+          <!-- Company Name -->
+          <div class="mb-3">
+            <label class="form-label text-light">Company Name</label>
+            <input type="text" class="form-control custom-input" placeholder="e.g. CodeCraft Inc.">
+          </div>
+  
+          <!-- Location -->
+          <div class="mb-3">
+            <label class="form-label text-light">Location</label>
+            <input type="text" class="form-control custom-input" placeholder="e.g. Remote or City Name">
+          </div>
+  
+          <!-- Job Type -->
+          <div class="mb-3">
+            <label class="form-label text-light">Job Type</label>
+            <select class="form-select custom-input">
+              <option selected disabled>Choose job type</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+              <option>Contract</option>
+              <option>Internship</option>
+            </select>
+          </div>
+  
+          <!-- Description -->
+          <div class="mb-3">
+            <label class="form-label text-light">Job Description</label>
+            <textarea class="form-control custom-input" rows="5" placeholder="Brief job description..."></textarea>
+          </div>
+  
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-submit">Post Job</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</section>

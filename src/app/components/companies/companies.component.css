@@ -1,0 +1,21 @@
+.container{
+    padding-top: 100px;
+    min-height: 100vh;
+}
+.company-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .company-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .company-name {
+    color: var(--color-accent-teal);
+    font-weight: 600;
+  }
+  
