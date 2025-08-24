@@ -1,24 +1,48 @@
-nav{
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 10000;
-    top: 0;
-    
-}
+/* Main navbar background */
 .custom-navbar {
-    background-color: #F7F7F6;
-  }
-  .nav-link {
-    color: #1F2937; /* Charcoal Gray */
-  }
-  .nav-link:hover {
-    color: #6366F1; /* Electric Indigo */
-  }
-  .navbar-brand {
-    color:var( --color-accent-orange); /* Tangerine */
-    font-weight: 600;
-  }
-  .navbar-toggler {
-    border-color: #ddd;
-  }
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.8rem 1.5rem;
+}
+
+/* Brand/Logo */
+.navbar-brand {
+  color: var(--color-accent-indigo);
+  font-size: 1.4rem;
+  transition: color 0.2s ease-in-out;
+}
+.navbar-brand:hover {
+  color: var(--color-accent-teal);
+}
+
+/* Nav Links */
+.nav-link {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-accent-teal);
+}
+
+/* Login Button */
+.btn-login {
+  background-color: var(--color-accent-indigo);
+  color: white !important;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-login:hover {
+  background-color: var(--color-accent-teal);
+  color: white !important;
+}
+
+/* Mobile nav toggler */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
