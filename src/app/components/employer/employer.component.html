@@ -1,0 +1,68 @@
+<div class="form-container">
+    <div class="form-card">
+      <h2 class="form-title">Create Employer Profile</h2>
+      <p class="form-subtitle">Tell us about your company so job seekers can learn more about you.</p>
+  
+      <form [formGroup]="employerForm" (ngSubmit)="onSubmit()">
+        <div class="form-field">
+          <label for="companyName">Company Name</label>
+          <input
+            id="companyName"
+            type="text"
+            formControlName="companyName"
+            placeholder="e.g., Innovate Solutions Inc."
+          />
+          <div class="error-message" *ngIf="employerForm.get('companyName')?.invalid && employerForm.get('companyName')?.touched">
+            <p *ngIf="employerForm.get('companyName')?.errors?.['required']">
+              Company name is required.
+            </p>
+            <p *ngIf="employerForm.get('companyName')?.errors?.['maxlength']">
+              Name cannot exceed 100 characters.
+            </p>
+          </div>
+        </div>
+  
+        <div class="form-field">
+          <label for="companyWebsite">Company Website</label>
+          <input
+            id="companyWebsite"
+            type="url"
+            formControlName="companyWebsite"
+            placeholder="e.g., https://www.innovatesolutions.com"
+          />
+          <div class="error-message" *ngIf="employerForm.get('companyWebsite')?.invalid && employerForm.get('companyWebsite')?.touched">
+            <p *ngIf="employerForm.get('companyWebsite')?.errors?.['required']">
+              Company website is required.
+            </p>
+            <p *ngIf="employerForm.get('companyWebsite')?.errors?.['pattern']">
+              Please enter a valid URL (starting with http:// or https://).
+            </p>
+          </div>
+        </div>
+  
+        <div class="form-field">
+          <label for="companyDescription">Company Description</label>
+          <textarea
+            id="companyDescription"
+            formControlName="companyDescription"
+            rows="5"
+            placeholder="Describe what your company does, its culture, and what makes it a great place to work."
+          ></textarea>
+          <div class="error-message" *ngIf="employerForm.get('companyDescription')?.invalid && employerForm.get('companyDescription')?.touched">
+            <p *ngIf="employerForm.get('companyDescription')?.errors?.['required']">
+              Company description is required.
+            </p>
+            <p *ngIf="employerForm.get('companyDescription')?.errors?.['maxlength']">
+              Description cannot exceed 500 characters.
+            </p>
+          </div>
+        </div>
+  
+        <div class="button-group">
+          <button type="submit" [disabled]="employerForm.invalid">
+            Create Profile
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>

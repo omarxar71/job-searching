@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { RoleNavbarComponent } from "../role-navbar/role-navbar.component";
 @Component({
   selector: 'app-employer-or-job-seeker',
   standalone: true,
-  imports: [],
+  imports: [RoleNavbarComponent],
   templateUrl: './employer-or-job-seeker.component.html',
   styleUrl: './employer-or-job-seeker.component.css'
 })
@@ -16,9 +17,9 @@ export class EmployerOrJobSeekerComponent {
 
     // Redirect based on role
     if (role === 'employer') {
-      this.router.navigate(['/employer-dashboard']);
+      this.router.navigate(['/role/employer']);
     } else {
-      this.router.navigate(['/jobseeker-dashboard']);
+      this.router.navigate(['/role/job-seeker']);
     }
   }
 }

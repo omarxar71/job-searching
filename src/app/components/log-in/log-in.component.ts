@@ -26,7 +26,7 @@ export class LogInComponent {
      this._AuthService.loginApi(this.loginForm.value).subscribe({
       next : (res)=>{
         console.log(res);
-        this._Router.navigate(["/main/home"])
+        this._Router.navigate(["/role"])
         localStorage.setItem("token" ,res.giveToken)
         this._AuthService.decodeToken()
       } , 

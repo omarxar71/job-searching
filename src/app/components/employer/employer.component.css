@@ -1,0 +1,115 @@
+/* Use your provided global variables */
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.form-title {
+  color: var(--color-text-primary);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent-indigo);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.error-message {
+  color: var(--color-accent-orange);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-surface);
+    background-color: var(--color-accent-teal);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover:not([disabled]) {
+      background-color: darken(#5EEAD4, 10%); /* Custom darken for better contrast */
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      background-color: var(--color-border);
+      color: var(--color-text-secondary);
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card p-4 p-md-5 border-dark shadow-lg bg-secondary bg-opacity-25">
+          <h2 class="card-title text-center text-info fw-bold mb-1">Create Job Seeker Profile</h2>
+          <p class="card-subtitle text-center text-white-50 mb-4">Build your profile to showcase your skills, experience, and education to potential employers.</p>
+
+          <form [formGroup]="jobSeekerForm">
+            <!-- Skills Section -->
+            <div class="mb-4" formArrayName="skills">
+              <h4 class="text-white-50 mb-3">Skills</h4>
+              <div class="mb-3" >
+                <label for="skills-input" class="form-label text-white-50 small">Skills</label>
+                <div class="input-group" *ngFor="let skills of getSkills().controls ; let i =index" >
+                  <input [formControlName]="i" formControlName="name" type="text" class="form-control form-control-lg bg-dark text-white border-secondary" id="skills-input" placeholder="e.g., Angular, JavaScript, REST APIs">
+                  <button (click)="addSkill()" class="btn btn-info" type="button">Add Skill</button>
+                </div>
+              </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <!-- Experience Section -->
+            <div class="mb-4" formArrayName="experience">
+              <h4 class="text-white-50 mb-3">Work Experience</h4>
+              <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-info" (click)="addExperience()" type="button">Add Experience</button>
+              </div>
+              <div class="card p-3 bg-dark text-white border-secondary" *ngFor="let experience of getExperience().controls ; let i =index" [formGroupName]="i">
+                <h5 class="card-title text-info fw-bold mb-3">Experience {{i+1}}</h5>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label text-white-50 small">Job Title</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="e.g., Software Developer">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label text-white-50 small">Company</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="e.g., Tech Solutions Inc.">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-white-50 small">Start Date</label>
+                    <input type="date" class="form-control bg-dark text-white border-secondary">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-white-50 small">End Date</label>
+                    <input type="date" class="form-control bg-dark text-white border-secondary">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label text-white-50 small">Description</label>
+                    <textarea class="form-control bg-dark text-white border-secondary" rows="3" placeholder="Describe your responsibilities and achievements"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <!-- Education Section -->
+            <div class="mb-4" formArrayName="education"> 
+              <h4 class="text-white-50 mb-3">Education</h4>
+            
+              <div class="card p-3 bg-dark text-white border-secondary" *ngFor="let edu of getEducation().controls ; let i =index" [formGroupName]="i">
+                <h5 class="card-title text-info fw-bold mb-3" >Education {{i+1}}</h5>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label text-white-50 small">School</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="e.g., University of Technology">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label text-white-50 small">Degree</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="e.g., Bachelor of Science">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label text-white-50 small">Field of Study</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="e.g., Computer Science">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-white-50 small">Start Date</label>
+                    <input type="date" class="form-control bg-dark text-white border-secondary">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-white-50 small">End Date</label>
+                    <input type="date" class="form-control bg-dark text-white border-secondary">
+                  </div>
+                </div>
+              </div>
+              <div class="d-grid gap-2 mb-3">
+                <button (click)="addEducation()" class="btn btn-info" type="button">Add Education</button>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+              <button type="submit" class="btn btn-info btn-lg fw-bold">Save Profile</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>

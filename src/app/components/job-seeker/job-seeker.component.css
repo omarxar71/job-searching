@@ -1,0 +1,235 @@
+/* Use your provided global variables */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 700px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.form-title {
+  color: var(--color-text-primary);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 3rem 0;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  margin-bottom: 1rem;
+
+  h3 {
+    color: var(--color-accent-teal);
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+/* Form Fields & Inputs */
+.form-field {
+  margin-bottom: 1.5rem;
+  position: relative;
+
+  label {
+    display: block;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent-indigo);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    }
+    &::placeholder {
+      color: var(--color-muted-gray);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.date-fields {
+  display: flex;
+  gap: 1.5rem;
+
+  .form-field {
+    flex: 1;
+  }
+}
+
+/* Dynamic Field Styles */
+.dynamic-field {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  input {
+    flex-grow: 1;
+  }
+}
+
+.dynamic-group {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  h4 {
+    color: var(--color-accent-indigo);
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.add-btn, .remove-btn, .remove-group-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-btn {
+  background-color: var(--color-accent-indigo);
+  color: var(--color-surface);
+  border: none;
+  &:hover {
+    background-color: darken(#6366F1, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+.remove-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: var(--color-accent-orange);
+    color: var(--color-accent-orange);
+    transform: scale(1.1);
+  }
+}
+
+.remove-group-btn {
+  background: none;
+  border: 1px solid var(--color-accent-orange);
+  color: var(--color-accent-orange);
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    background-color: var(--color-accent-orange);
+    color: var(--color-surface);
+  }
+}
+
+.error-message {
+  color: var(--color-accent-orange);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+
+  button[type="submit"] {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-surface);
+    background-color: var(--color-accent-teal);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover:not([disabled]) {
+      background-color: darken(#5EEAD4, 10%);
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      background-color: var(--color-border);
+      color: var(--color-text-secondary);
+      cursor: not-allowed;
+    }
+  }
+}
