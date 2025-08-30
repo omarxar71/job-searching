@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UserService } from '../../core/services/user.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-job-seeker',
@@ -10,6 +13,8 @@ import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Va
   styleUrl: './job-seeker.component.css'
 })
 export class JobSeekerComponent {
+  private readonly _UserService = inject(UserService)
+  private readonly _Router = inject(Router)
   jobSeekerForm! : FormGroup
   constructor(private fb: FormBuilder) { 
     this.jobSeekerForm = this.fb.group({
@@ -58,7 +63,19 @@ export class JobSeekerComponent {
   addEducation (){
     return this.getEducation().push(this.educationFormGroup())
   }
- 
+  submit(){
+    console.log(this.jobSeekerForm.value)
+     
+      this._UserService.createJobSeeker(this.jobSeekerForm.value).subscribe({
+        next:(res)=>{
+          this._Router.navigate(["/main/home"])
+        },
+        error:(err)=>{
+          console.log(err)
+        }
+      })
+     
+  }
 }
 
 

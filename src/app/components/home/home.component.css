@@ -1,26 +1,110 @@
-
-.how-many-interviews{
-    margin-top: 100px;
+.hero-section {
+  position: relative;
+  min-height: 70vh;
+  color: var(--color-text-primary);
 }
-@keyframes fadeInDown {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
+
+.hero-gradient-overlay {
+  background: linear-gradient(135deg, var(--color-accent-indigo), var(--color-accent-teal));
+  opacity: 0.8;
+  animation: bg-pan 10s linear infinite;
+}
+
+@keyframes bg-pan {
+  0% {
+    background-position: 0% 50%;
   }
-  @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+  50% {
+    background-position: 100% 50%;
   }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+  100% {
+    background-position: 0% 50%;
   }
-  
-  /* Hover Effects for Stats Cards */
-  .stats-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.hero-text {
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-indigo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-hero {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-hero:hover {
+  background-color: var(--color-accent-teal);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(94, 234, 212, 0.3);
+}
+
+/* --- Stats Section --- */
+.stats-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.stats-card .text-accent-indigo {
+  color: var(--color-accent-indigo);
+}
+
+.stats-card .text-accent-teal {
+  color: var(--color-accent-teal);
+}
+
+.stats-card .text-accent-orange {
+  color: var(--color-accent-orange);
+}
+
+.stats-card:nth-child(1):hover {
+  border-color: var(--color-accent-indigo);
+}
+
+.stats-card:nth-child(2):hover {
+  border-color: var(--color-accent-teal);
+}
+
+.stats-card:nth-child(3):hover {
+  border-color: var(--color-accent-orange);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+}
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .hero-section button:hover {
-    background-color: var(--color-accent-indigo);
-    color: #fff;
-  }
+
+
+}

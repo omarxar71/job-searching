@@ -1,52 +1,43 @@
-<!-- Hero Section -->
-<div class="hero-section position-relative text-center d-flex align-items-center justify-content-center"
-     style="min-height: 70vh; background: linear-gradient(135deg, var(--color-accent-indigo), var(--color-accent-teal)); color: #fff; overflow: hidden;">
-  <div class="container">
+<div class="hero-section position-relative text-center d-flex align-items-center justify-content-center">
+  <div class="container z-index-1">
     <div class="hero-text">
-      <h3 class="fs-3 fw-bold mb-3" style="letter-spacing: 1px; text-transform: uppercase; animation: fadeInDown 1s ease;">
-        Find Your Job
-      </h3>
-      <p class="lead mb-4" style="animation: fadeInUp 1s ease 0.3s;">Start Your Career Today</p>
-      <button routerLink="/job-listed" class="btn px-4 py-2 fw-semibold shadow-lg"
-              style="background-color: #fff; color: var(--color-accent-indigo); border-radius: 50px; transition: all 0.3s ease; animation: fadeInUp 1s ease 0.6s;">
-        Find a Job
+      <h1 class="display-3 fw-bold mb-3">
+        Find Your Dream Job
+      </h1>
+      <p class="lead mb-4 fw-light">Your future career is waiting for you.</p>
+      <button routerLink="/job-listed" class="btn btn-hero px-5 py-3 fw-semibold rounded-pill shadow-lg">
+        Explore Jobs
       </button>
     </div>
   </div>
-  <!-- Floating Background Circles -->
-  <div class="floating-circle" style="position: absolute; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; top: 10%; left: 5%; animation: float 6s ease-in-out infinite;"></div>
-  <div class="floating-circle" style="position: absolute; width: 200px; height: 200px; background: rgba(255,255,255,0.08); border-radius: 50%; bottom: 15%; right: 10%; animation: float 8s ease-in-out infinite reverse;"></div>
+  <div class="hero-gradient-overlay"></div>
 </div>
 
-<!-- Stats Section -->
-<div class="how-many-interviews py-5" style="background-color: var(--color-bg); color: var(--color-text-primary);">
+<div class="how-many-interviews py-5">
   <div class="container">
     <div class="row g-4 text-center">
 
-      <!-- Interviews -->
       <div class="col-12 col-md-4">
-        <div class="stats-card p-4 rounded shadow-lg"
-             style="background-color: var(--color-surface); border: 1px solid var(--color-border); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-          <h2 class="fw-bold" style="color: var(--color-accent-indigo); font-size: 2.5rem;">1,240</h2>
-          <p class="fw-semibold mt-2" style="color: var(--color-text-secondary); font-size: 1.1rem;">Interviews Scheduled</p>
+        <div class="stats-card p-4 rounded-3 shadow-lg h-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar mb-3 text-accent-indigo"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <h2 class="fw-bold fs-1 mb-0" style="color: var(--color-accent-indigo);">1,240</h2>
+          <p class="fw-semibold mt-2 mb-0">Interviews Scheduled</p>
         </div>
       </div>
 
-      <!-- Applications -->
       <div class="col-12 col-md-4">
-        <div class="stats-card p-4 rounded shadow-lg"
-             style="background-color: var(--color-surface); border: 1px solid var(--color-border); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-          <h2 class="fw-bold" style="color: var(--color-accent-teal); font-size: 2.5rem;">8,935</h2>
-          <p class="fw-semibold mt-2" style="color: var(--color-text-secondary); font-size: 1.1rem;">Applications Submitted</p>
+        <div class="stats-card p-4 rounded-3 shadow-lg h-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send mb-3 text-accent-teal"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          <h2 class="fw-bold fs-1 mb-0" style="color: var(--color-accent-teal);">8,935</h2>
+          <p class="fw-semibold mt-2 mb-0">Applications Submitted</p>
         </div>
       </div>
 
-      <!-- Hires -->
       <div class="col-12 col-md-4">
-        <div class="stats-card p-4 rounded shadow-lg"
-             style="background-color: var(--color-surface); border: 1px solid var(--color-border); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-          <h2 class="fw-bold" style="color: var(--color-accent-orange); font-size: 2.5rem;">540</h2>
-          <p class="fw-semibold mt-2" style="color: var(--color-text-secondary); font-size: 1.1rem;">People Hired</p>
+        <div class="stats-card p-4 rounded-3 shadow-lg h-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award mb-3 text-accent-orange"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 22 12 19 17 22 15.79 13.88"></polyline></svg>
+          <h2 class="fw-bold fs-1 mb-0" style="color: var(--color-accent-orange);">540</h2>
+          <p class="fw-semibold mt-2 mb-0">People Hired</p>
         </div>
       </div>
 

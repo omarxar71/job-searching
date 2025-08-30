@@ -7,93 +7,50 @@
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8">
-        <div class="search-bar p-3 rounded d-flex align-items-center gap-2">
+        <div class="search-bar p-3 rounded d-flex align-items-center gap-2 shadow-lg">
           <input type="text" class="form-control custom-input" placeholder="Search for jobs..." />
-          <button class="btn btn-search">Search</button>
+          <button class="btn btn-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
         </div>
       </div>
     </div>
   </div>
-  
 
-<div class="container my-5">
+  <div class="container my-5">
     <div class="row g-4">
       
-      <!-- Job 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 rounded border h-100">
-          <h5 class="job-title mb-1">Frontend Developer</h5>
-          <p class="job-company mb-2">TechNova Inc.</p>
+    @for (item of allJobs; track $index) {
+      <div class="col-12 col-md-6 col-lg-4"  [routerLink]="'/main/job-details/'+item._id">
+        <div class="job-card p-4 rounded border h-100 position-relative overflow-hidden">
+          <div class="job-card-bg"></div>
+         <div class="d-flex align-content-center justify-content-between">
+          <h5 class="job-title mb-1 text-primary">{{item.title}}</h5>
+          <span class=" badge-custom badge-accent-teal">posted At :{{item.createdAt | date:'shortTime'}}</span>
+
+         </div>
+          <p class="job-company mb-2 text-secondary">TechNova Inc.</p>
+          <p class="job-company mb-2 text-secondary">{{item.description}}</p>
           <div class="badges mb-3">
-            <span class="badge badge-custom">Full-Time</span>
-            <span class="badge badge-custom">Remote</span>
+            <span class="badge badge-custom badge-accent-teal" >Full-Time</span>
+            <span class="badge badge-custom badge-accent-purple">Remote</span>
           </div>
-          <button class="btn btn-apply w-100">Apply Now</button>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="job-location text-danger">New York, NY</span>
+            <button class="btn btn-apply">
+              Apply Now
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
         </div>
       </div>
+    }
   
-      <!-- Job 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 rounded border h-100">
-          <h5 class="job-title mb-1">Backend Engineer</h5>
-          <p class="job-company mb-2">CodeCraft Labs</p>
-          <div class="badges mb-3">
-            <span class="badge badge-custom">Part-Time</span>
-            <span class="badge badge-custom">On-site</span>
-          </div>
-          <button class="btn btn-apply w-100">Apply Now</button>
-        </div>
-      </div>
+     
   
-      <!-- Job 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 rounded border h-100">
-          <h5 class="job-title mb-1">UI/UX Designer</h5>
-          <p class="job-company mb-2">Visionary Studio</p>
-          <div class="badges mb-3">
-            <span class="badge badge-custom">Contract</span>
-            <span class="badge badge-custom">Remote</span>
-          </div>
-          <button class="btn btn-apply w-100">Apply Now</button>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 rounded border h-100">
-          <h5 class="job-title mb-1">UI/UX Designer</h5>
-          <p class="job-company mb-2">Visionary Studio</p>
-          <div class="badges mb-3">
-            <span class="badge badge-custom">Contract</span>
-            <span class="badge badge-custom">Remote</span>
-          </div>
-          <button class="btn btn-apply w-100">Apply Now</button>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 rounded border h-100">
-          <h5 class="job-title mb-1">UI/UX Designer</h5>
-          <p class="job-company mb-2">Visionary Studio</p>
-          <div class="badges mb-3">
-            <span class="badge badge-custom">Contract</span>
-            <span class="badge badge-custom">Remote</span>
-          </div>
-          <button class="btn btn-apply w-100">Apply Now</button>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="job-card p-4 rounded border h-100">
-          <h5 class="job-title mb-1">UI/UX Designer</h5>
-          <p class="job-company mb-2">Visionary Studio</p>
-          <div class="badges mb-3">
-            <span class="badge badge-custom">Contract</span>
-            <span class="badge badge-custom">Remote</span>
-          </div>
-          <button class="btn btn-apply w-100">Apply Now</button>
-        </div>
-      </div>
   
     </div>
   </div>
-  
 </section>
 
 

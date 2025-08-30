@@ -1,0 +1,53 @@
+.job-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s ease-in-out;
+  }
+  .job-card:hover {
+    transform: translateY(-5px);
+    background: var(--color-hover);
+  }
+  
+  .job-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* Custom Badges */
+  .badge-custom {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .badge-accent-indigo {
+    background: var(--color-accent-indigo);
+    color: #fff;
+  }
+  .badge-accent-teal {
+    background: var(--color-accent-teal);
+    color: #111;
+  }
+  .badge-accent-orange {
+    background: var(--color-accent-orange);
+    color: #111;
+  }
+  
+  .text-accent-indigo {
+    color: var(--color-accent-indigo) !important;
+  }
+  .text-accent-orange {
+    color: var(--color-accent-orange) !important;
+  }
+  .text-accent-teal {
+    color: var(--color-accent-teal) !important;
+  }
+  
+  .detail-box {
+    padding: 1rem;
+    background: var(--color-active);
+    border-radius: 12px;
+  }
+  

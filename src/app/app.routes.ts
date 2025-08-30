@@ -13,6 +13,7 @@ import { authGuard } from './core/guards/auth.guard';
 import { EmployerComponent } from './components/employer/employer.component';
 import { JobSeekerComponent } from './components/job-seeker/job-seeker.component';
 import { RoleLayoutComponent } from './core/layouts/role-layout/role-layout.component';
+import { JobDetailsComponent } from './components/job-details/job-details.component';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,7 @@ export const routes: Routes = [
         {path:"companies" , component:CompaniesComponent},
         {path:"list-Job" , component:ListJobComponent},
         {path:"employer-or-seeker" , component:EmployerOrJobSeekerComponent},
+        {path:"job-details/:id" , component:JobDetailsComponent}
       
     ]},
     {path: "" , redirectTo:"auth/sign-up" , pathMatch: "full"},

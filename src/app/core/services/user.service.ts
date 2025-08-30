@@ -19,4 +19,11 @@ createEmployerApi=(form : any):Observable<any>=>{
   }
  } )
 }
+createJobSeeker (form:any):Observable<any>{
+  return this._HttpClient.post(baseUrl+"user/job-seeker" , form , {
+    headers:{
+      auth:localStorage.getItem("token")!
+    }
+  })
+}
 }
